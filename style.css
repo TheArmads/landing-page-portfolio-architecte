@@ -1,8 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     color: #2E2A26;
     font-family: "Cormorant";
     padding: 0;
     margin: 0;
+    background-color: #D8935C;
+    width: 100%;
+}
+
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+h3 {
+    font-size: 34px;
+}
+
+h5 {
+    font-size: 22px;
+}
+
+h6 {
+    font-size: 19px;
+    font-style: italic;
 }
 
 section {
@@ -15,6 +48,12 @@ img {
     height: 100%;
     width: 100%;
 }
+
+a:hover {
+    background-color: blue;
+    color: greenyellow;
+}
+
 
 a {
     text-decoration: none;
@@ -31,6 +70,11 @@ button {
     width: fit-content;
 }
 
+button:hover {
+    background-color: crimson;
+    color: white;
+}
+
 nav {
     height: 100%;
     width: 100%;
@@ -41,6 +85,7 @@ nav {
     flex-direction: row;
 }
 
+
 header {
     padding-left: 5%;
     padding-right: 5%;
@@ -48,6 +93,8 @@ header {
     justify-content: space-between;
     flex-direction: row;
     height: 10vh;
+    width: 100%;
+    background-color: burlywood;
 }
 
 header img {
@@ -75,11 +122,16 @@ header li {
     color: #2E2A26;
 }
 
+#boutonblanc:hover {
+    background-color: crimson;
+    color: white;
+}
+
 #section1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 90vh;
+    height: 80vh;
 }
 
 #section1gauche {
@@ -101,18 +153,24 @@ header li {
 #section1 img {
     max-width: 50vw;
     object-fit: contain;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
 #section2 {
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: burlywood;
+    padding-bottom: 48px;
+    align-items: center;
 }
 
 #section2bas {
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 90%;
+    justify-content: space-around;
 }
 
 #section2bas img {
@@ -125,11 +183,21 @@ header li {
     flex-direction: column;
     height: 50vh;
     justify-content: space-between;
+    align-items: center;
 }
 
 #liste2 {
     width: 50%;
+    list-style: none;
+    padding-left: 0;
+
 }
+
+#liste2 li::before {
+    content: "✓  ";
+
+}
+
 
 #section2droite button {
     justify-self: flex-end;
@@ -145,8 +213,9 @@ header li {
 #section3 {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    width: 100vw;
+    justify-content: space-between;
+    width: 90%;
+    padding-bottom: 48px;
 }
 
 .section3article {
@@ -154,34 +223,66 @@ header li {
     flex-direction: column;
     width: 27vw;
     align-items: center;
+    background-color: burlywood;
+}
+
+.section3article p {
+    width: 90%;
+}
+
+.section3article button {
+    margin-bottom: 12px;
 }
 
 .section3article img {
-    object-fit: contain;
+    object-fit: cover;
 }
 
 #section4 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: burlywood;
+    justify-content: center;
+    padding-bottom: 48px;
 }
 
-.section4a {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
+.section4a,
 .section4b {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.droite4a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
+.droite4a p {
+    width: 60%;
+}
+
+.gauche4b {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gauche4b p {
+    width: 60%;
+}
+
+
+
 #section4 img {
-    width: 40vw;
+    width: 40%;
     object-fit: contain;
 }
 
@@ -189,25 +290,115 @@ header li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 66vh;
+    padding-bottom: 48px;
 }
 
-#section5bas {display: flex;
+#section5bas {
+    display: flex;
     flex-direction: row;
     justify-content: center;
-gap: 50px;}
+    gap: 50px;
+}
 
 
-.temoignage {width: 40vw;
-border: solid;
-background-color: #D8935C;}
+.temoignage {
+    width: 40vw;
+    border: solid;
+    border-radius: 16px;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-.temoignagebas {display: flex;
+.temoignage p {
+    width: 85%;
+}
+
+.temoignagebas {
+    display: flex;
     flex-direction: row;
-    justify-content: flex-start;}
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
 
 .temoignagebas img {
     height: 70px;
     object-fit: contain;
     border-radius: 100%;
-width: fit-content;}
+    width: fit-content;
+    margin-bottom: 16px;
+}
+
+.temoignagenom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.temoignagenom h5,
+.temoignagenom h6 {
+    margin: 0;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: burlywood;
+    justify-content: center;
+}
+
+#footercontainer {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+#footer ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 16px;
+}
+
+#footergauche {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    padding-left: 50px;
+}
+
+
+
+#footerdroite {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#footerdroite ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#footerdroite button {
+    align-self: self-end;
+    margin-right: 30%;
+}
+
+#footer input {
+    width: 70%;
+}
